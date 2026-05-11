@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
+
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -12,16 +14,19 @@
       "require": "./dist/index.js"
     }
   },
+
   "files": [
     "dist",
     "README.md",
     "CHANGELOG.md"
   ],
+
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "vitest run",
     "prepublishOnly": "npm run build"
   },
+
   "keywords": [
     "runplane",
     "ai",
@@ -35,25 +40,28 @@
     "llm",
     "ai-safety"
   ],
+
   "author": "Runplane",
   "license": "MIT",
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/runplane/runplane-sdk.git"
+    "url": "git+https://github.com/runplane-ai/runplane-sdk.git"
   },
-  "homepage": "https://runplane.ai/docs/sdk",
+
+  "homepage": "https://runplane.ai/sdk-integrations",
+
   "bugs": {
-    "url": "https://github.com/runplane/runplane-sdk/issues"
+    "url": "https://github.com/runplane-ai/runplane-sdk/issues"
   },
+
   "engines": {
     "node": ">=18"
   },
+
   "devDependencies": {
     "tsup": "^8.0.0",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
-  },
-  "dependencies": {
-    "@runplane/runplane-sdk": "^1.2.2"
   }
 }
